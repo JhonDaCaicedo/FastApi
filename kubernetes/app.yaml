@@ -78,21 +78,21 @@ spec: #especificaciones del pod
           ports:
             - containerPort: 8000 #puerto!
           envFrom:
-            - configMapRef:
-                name: fastapi-config
-            - secretRef:
-                name: fastapi-secrets
-          # env: #variables de entorno
-          #   - name: DATABASE_HOST
-          #     value: "mysql"
-          #   - name: MYSQL_ROOT_PASSWORD
-          #     value: root_password
-          #   - name: MYSQL_DATABASE
-          #     value: todo_db
-          #   - name: MYSQL_USER
-          #     value: user
-          #   - name: MYSQL_PASSWORD
-          #     value: password
+          #  - configMapRef:
+          #      name: fastapi-config
+          #  - secretRef:
+          #     name: fastapi-secrets
+           env: #variables de entorno
+             - name: DATABASE_HOST
+               value: "mysql"
+             - name: MYSQL_ROOT_PASSWORD
+               value: root_password
+             - name: MYSQL_DATABASE
+               value: todo_db
+             - name: MYSQL_USER
+               value: user
+             - name: MYSQL_PASSWORD
+               value: password
 
 ---
 apiVersion: v1 #version
